@@ -17,7 +17,7 @@
     --bg-color-transparent: rgba(255,255,255,0.6);
     --heading-color: hsl(var(--hue-1),61%,24%);
     --text-color: hsl(var(--hue-1),17%,63%);
-
+    --section-padding: 7 rem;
    
 }
 /*-------------General Styles----------------*/
@@ -97,6 +97,54 @@ ul{
     color: var(--text-color);
     font-size: 0.9rem;
     margin: 2rem 0;
+    line-height: 2.3;
+}
+
+.cta .btn{
+    margin-right: 1.5rem;
+}
+
+.btn{
+    display: inline-block;
+    padding: 0.9rem 1.75rem;
+    border-radius: 17px;
+    background-color: var(--main-color-1);
+    color: #fff;
+    font-size: .85rem;
+    letter-spacing: .4px;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: var(--main-color-dark-1);
+}
+
+.btn.secondary-btn{
+    position:relative;
+    background-color: transparent;
+    color: var(--main-color-1);
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0px;
+    border-bottom: 2.5px solid var(--main-color-2);
+    border-radius: 0px;
+    padding: .15rem 0;
+}
+
+.btn.secondary-btn::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2.5px;
+    bottom:-2.5px;
+    left:0;
+    background-color: var(--main-color-1);
+    transition: 0.3s ease-in-out;
+}
+.section{
+    position: relative;
+    padding: var(--section-padding) 0;
 }
 
 /*----------------NAV Bar Styling----------------*/
@@ -239,48 +287,6 @@ header .scrolled.logo{
     align-items:center;
 }
 
-.cta .btn{
-    margin-right: 1.5rem;
-}
-
-.btn{
-    display: inline-block;
-    padding: 0.9rem 1.75rem;
-    border-radius: 17px;
-    background-color: var(--main-color-1);
-    color: #fff;
-    font-size: .85rem;
-    letter-spacing: .4px;
-    text-transform: capitalize;
-    transition: 0.3s;
-}
-
-.btn:hover{
-    background-color: var(--main-color-dark-1);
-}
-
-.btn.secondary-btn{
-    position:relative;
-    background-color: transparent;
-    color: var(--main-color-1);
-    font-weight: 500;
-    font-size: 0.9rem;
-    letter-spacing: 0px;
-    border-bottom: 2.5px solid var(--main-color-2);
-    border-radius: 0px;
-    padding: .15rem 0;
-}
-
-.btn.secondary-btn::before{
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2.5px;
-    bottom:-2.5px;
-    left:0;
-    background-color: var(--main-color-1);
-    transition: 0.3s ease-in-out;
-}
 
 .btn.secondary-btn:hover::before{
     width:100%;
@@ -333,4 +339,27 @@ header .scrolled.logo{
     left: 25%;
     bottom: 80px;
     transform: translate(-50%, -50%);
+}
+
+/*----------------About Area Styling----------------*/
+.about .container {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+}
+
+.about .text{
+    margin: 3rem 0 4rem;
+
+}
+
+.st0{
+    fill:red;
+}
+
+.st1{
+    fill:rgb(0, 13, 255);
+}
+
+.st2{
+    fill:rgb(0, 255, 55);
 }
